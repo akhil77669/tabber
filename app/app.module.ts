@@ -1,15 +1,20 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { HelloComponent } from './hello.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { NgbdAlertBasic } from './alert-basic';
+import { CardComponent } from './card/card.component';
+import { FindPlanComponent } from './find-plan/find-plan.component';
+import { ConfigurePlanComponent } from './configure-plan/configure-plan.component';
+
 
 @NgModule({
-  imports:      [ BrowserModule, NgbModule, FormsModule, NgbModule.forRoot() ],
-  declarations: [ AppComponent, HelloComponent, NgbdAlertBasic ],
+  imports:      [ BrowserModule, NgbModule, NgbModule.forRoot() ],
+  declarations: [ AppComponent,
+  CardComponent,
+    FindPlanComponent,
+    ConfigurePlanComponent
+],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

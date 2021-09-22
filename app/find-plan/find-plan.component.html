@@ -1,0 +1,9 @@
+<div class="tab-pane tab-border">
+    <h3 class="display-6">Shop Feature Plans</h3>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col mt-2" *ngFor="let item of data">
+            <app-card [data]="item" (change)="clicked()"></app-card>
+        </div>
+    </div>
+</div>

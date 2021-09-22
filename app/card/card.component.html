@@ -1,0 +1,16 @@
+<div class="card">
+    <div class="tag">{{data.price}}</div>
+    <div class="lead text-center mt-5 bold">{{data.heading}}</div>
+    <i class="fas fa-dumbbell"></i>
+    <div class="card-body">
+        <div class="lead bold">
+            {{data.label}}
+        </div>
+        <div class="lead  bold">
+            {{data.lead}}
+        </div>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-2">
+            <button class="btn" type="button" (click)="configure()">Configure Plan <i class="fas fa-arrow-right"></i></button>
+        </div>
+    </div>
+</div>

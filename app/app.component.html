@@ -1,16 +1,31 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<main class="container pb-3">
+<h1 class="display-4 text-center mt-3 pt-3 pb-2">Join Our Club</h1>
+<ul ngbNav #nav="ngbNav" [(activeId)]="active" class=" nav nav-pills mb-3 flex-column flex-sm-row nav-justified">
+  <li [ngbNavItem]="1">
+    <a ngbNavLink>1: Find a Plan</a>
+    <ng-template ngbNavContent>
+      <app-find-plan (change)="tabChange()"></app-find-plan>
+    </ng-template>
+  </li>
+  <li [ngbNavItem]="2">
+    <a ngbNavLink>2: Configure Plan</a>
+    <ng-template ngbNavContent>
+      <app-configure-plan></app-configure-plan>
+    </ng-template>
+  </li>
+  <li [ngbNavItem]="3">
+    <a ngbNavLink>3: Enter Information</a>
+    <ng-template ngbNavContent>
+      <p>.</p>
+    </ng-template>
+  </li>
+  <li [ngbNavItem]="4">
+    <a ngbNavLink>4: Sign and Complete</a>
+    <ng-template ngbNavContent>
+      <p>.</p>
+    </ng-template>
+  </li>
+</ul>
 
-
-<!-- <p>
-  <ngb-alert [dismissible]="false">
-    <strong>Warning!</strong> Better check yourself, you're not looking too good.
-  </ngb-alert>
-</p> -->
-
- <ngbd-alert-basic></ngbd-alert-basic>
-
- <ngbd-alert-basic></ngbd-alert-basic>
- <ngbd-alert-basic></ngbd-alert-basic>
+<div [ngbNavOutlet]="nav" class="mt-2"></div>
+</main>
